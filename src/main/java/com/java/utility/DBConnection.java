@@ -23,7 +23,7 @@ public class DBConnection {
             e.printStackTrace();
         }
     }
-    public static Connection getCon()
+    public static Connection getConnection()
     {
         return con;
     }

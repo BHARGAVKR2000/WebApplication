@@ -14,13 +14,13 @@ import java.sql.ResultSet;
 
 @WebServlet(name = "userServlet", value = "/userLogin")
 public class UserLogin extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         try{
-            Connection connection = DBConnection.getCon();
+            Connection connection = DBConnection.getConnection();
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM users WHERE username=? AND password=?");
             ps.setString(1,username);
             ps.setString(2,password);

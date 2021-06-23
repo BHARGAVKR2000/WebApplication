@@ -20,10 +20,10 @@
                 <div class="card card1">
                     <div class="row justify-content-center my-auto">
                         <div class="col-md-8 col-10 my-5">
-                            <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="https://i.imgur.com/PSXxjNY.png"> </div>
+
                             <h3 class="mb-5 text-center heading">We are Tidi</h3>
                             <h6 class="msg-info">Please login to your account</h6>
-                            <form action="userLogin" action="post">
+                            <form action="userLogin" action="get">
                             <div class="form-group"> <label class="form-control-label text-muted">Username</label> <input type="text" id="email" name="username" placeholder="Phone no or email id" class="form-control"> </div>
                             <div class="form-group"> <label class="form-control-label text-muted">Password</label> <input type="password" id="psw" name="password" placeholder="Password" class="form-control"> </div>
                             <div class="row justify-content-center my-3 px-3"> <button type="submit" class="btn-block btn-color">Login to Tidi</button> </div>
