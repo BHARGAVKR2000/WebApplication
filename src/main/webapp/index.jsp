@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.io.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +8,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" >
+
     <link rel="stylesheet" type="text/css" href="UserLogin.css">
 </head>
 <body>
-
-
     <div class="container px-4 py-5 mx-auto">
         <div class="card card0">
             <div class="d-flex flex-lg-row flex-column-reverse">

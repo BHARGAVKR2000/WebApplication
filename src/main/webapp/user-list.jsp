@@ -49,7 +49,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Designation</th>
+                <th>Country</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -63,6 +63,7 @@
                     <td><c:out value="${user.email}" /></td>
                     <td><c:out value="${user.country}" /></td>
                     <td> <a href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
+                    <td> <a href="update?id=<c:out value='${user.id}' />">Update</a></td>
 
                 </tr>
             </c:forEach>

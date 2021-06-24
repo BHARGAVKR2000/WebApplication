@@ -10,6 +10,7 @@ public class UserDB {
 
     private static final String SELECT_ALL_Employee = "select * from users";
     private static final String DELETE_Employee = "delete from users where id = ?;";
+    private static final String UPDATE_Employee = "update from users set name=?, email=?, country=? where id=?;";
 
 
 
@@ -68,4 +69,18 @@ public class UserDB {
         }
         return rowDeleted;
     }
+
+    public boolean updateUser(int id, String name, String email, String country) throws SQLException {
+        boolean rowUpdated;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(UPDATE_Employee);) {
+            statement.setString(1, name);
+            statement.setString(2, email);
+            statement.setString(3, country);
+            statement.setInt(4, id);
+            rowUpdated = statement.executeUpdate() > 0;
+        }
+        return rowUpdated;
+    }
+
 }

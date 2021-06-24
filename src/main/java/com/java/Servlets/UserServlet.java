@@ -39,6 +39,11 @@ public class UserServlet extends HttpServlet {
                 case "/insert":
                     insertUser(request, response);
                     break;
+                case "/update":
+                    RequestDispatcher rd = request.getRequestDispatcher("UpdateUser.jsp");
+                    rd.include(request,response);
+                    updateUser(request, response);
+                    break;
                 default:
                     listUser(request, response);
                     break;
@@ -46,6 +51,15 @@ public class UserServlet extends HttpServlet {
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
+    }
+
+    private void updateUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String country = request.getParameter("country");
+        userDAO.updateUser(id,name,email,country);
+        response.sendRedirect("list");
     }
 
     private void insertUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
